@@ -5,3 +5,4 @@ CREATE TABLE `user` (
 ) ;
 INSERT INTO `user` VALUES ('1', '用户1', '123456');
 INSERT INTO `user` VALUES ('2', '用户2', '123456');
+INSERT INTO `user` VALUES ('3', '用户2', '123456');
