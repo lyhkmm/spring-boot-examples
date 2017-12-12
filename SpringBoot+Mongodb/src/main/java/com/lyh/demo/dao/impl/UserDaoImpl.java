@@ -47,9 +47,9 @@ public class UserDaoImpl implements UserDao{
     public int updateUser(UserEntity user) {
         Query query=new Query(Criteria.where("id").is(user.getId()));
         Update update= new Update().set("userName", user.getUserName()).set("passWord", user.getPassword());
-        //更新查询返回结果集的第一条
+        //更新结果集的第一条数据
         WriteResult result =mongoTemplate.updateFirst(query,update,UserEntity.class);
-        //更新查询返回结果集的所有
+        //更新结果集的全部数据
         // mongoTemplate.updateMulti(query,update,UserEntity.class);
         if(result!=null)
             return result.getN();
