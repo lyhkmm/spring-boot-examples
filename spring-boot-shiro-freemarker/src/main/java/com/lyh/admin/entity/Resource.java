@@ -21,7 +21,7 @@ import com.lyh.admin.entity.support.BaseEntity;
  * 资源表
  * </p>
  *
- * @author SPPan
+ * @author LYH
  * @since 2016-12-28
  */
 @Entity

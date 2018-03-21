@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SPPanAdmin - ${title!}</title>
+  <title>admin - ${title!}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Tell the browser to be responsive to screen width -->
@@ -44,7 +44,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>dmin</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SPPan</b>Admin</span>
+      <span class="logo-lg"><b>LYH</b>Admin</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -148,7 +148,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2018 <a href="http://whoismy8023.gitee.io">SPPan</a>.</strong> All rights
+    <strong>Copyright &copy; 2018 <a href="http://whoismy8023.gitee.io">LYH</a>.</strong> All rights
     reserved.
   </footer>
 </div>

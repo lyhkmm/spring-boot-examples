@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/admin.iml" filepath="$PROJECT_DIR$/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-shiro-freemarker.iml" filepath="$PROJECT_DIR$/spring-boot-shiro-freemarker.iml" />
     </modules>
   </component>
 </project>

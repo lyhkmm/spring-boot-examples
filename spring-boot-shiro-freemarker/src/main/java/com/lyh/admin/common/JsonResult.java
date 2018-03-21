@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Json 统一返回消息类
  *
- * @author SPPan
+ * @author LYH
  */
 public class JsonResult implements Serializable {
     private static final long serialVersionUID = -1491499610244557029L;

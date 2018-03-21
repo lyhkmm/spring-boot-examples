@@ -13,7 +13,7 @@ import java.util.List;
  * 资源服务类
  * </p>
  *
- * @author SPPan
+ * @author LYH
  * @since 2016-12-28
  */
 public interface IResourceService extends IBaseService<Resource, Integer> {

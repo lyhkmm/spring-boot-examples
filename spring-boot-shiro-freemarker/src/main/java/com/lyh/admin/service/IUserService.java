@@ -11,7 +11,7 @@ import com.lyh.admin.service.support.IBaseService;
  * 用户服务类
  * </p>
  *
- * @author SPPan
+ * @author LYH
  * @since 2016-12-28
  */
 public interface IUserService extends IBaseService<User, Integer> {

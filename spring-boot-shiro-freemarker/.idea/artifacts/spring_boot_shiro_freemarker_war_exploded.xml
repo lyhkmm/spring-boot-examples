@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="SPPanAdmin:war exploded">
-    <output-path>$PROJECT_DIR$/target/SPPanAdmin-0.0.1-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="spring-boot-shiro-freemarker:war exploded">
+    <output-path>$PROJECT_DIR$/target/admin-0.0.1-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -79,7 +79,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/SPPanAdmin-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/admin-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="spring-boot-shiro-freemarker/web/Web" />
     </root>
