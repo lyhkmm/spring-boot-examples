@@ -21,7 +21,7 @@ import com.lyh.admin.entity.support.BaseEntity;
 
 /**
  * <p>
- * 用户账户表
+ * 用户表
  * </p>
  *
  * @author LYH

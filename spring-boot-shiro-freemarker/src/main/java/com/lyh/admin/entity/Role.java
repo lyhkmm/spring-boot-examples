@@ -76,8 +76,8 @@ public class Role extends BaseEntity {
     private Date updateTime;
 
     @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY)
-    @JoinTable(name = "tb_role_resource", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "resource_id")})
-    private java.util.Set<Resource> resources;
+    @JoinTable(name = "tb_role_permission", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "resource_id")})
+    private java.util.Set<Permission> resources;
 
     public Integer getId() {
         return id;
@@ -135,11 +135,11 @@ public class Role extends BaseEntity {
         this.updateTime = updateTime;
     }
 
-    public java.util.Set<Resource> getResources() {
+    public java.util.Set<Permission> getResources() {
         return resources;
     }
 
-    public void setResources(java.util.Set<Resource> resources) {
+    public void setResources(java.util.Set<Permission> resources) {
         this.resources = resources;
     }
 

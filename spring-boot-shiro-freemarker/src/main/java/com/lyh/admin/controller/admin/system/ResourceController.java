@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lyh.admin.common.JsonResult;
-import com.lyh.admin.entity.Resource;
-import com.lyh.admin.service.IResourceService;
+import com.lyh.admin.entity.Permission;
+import com.lyh.admin.service.IPermissionService;
 
 @Controller
 @RequestMapping("/admin/resource")
 public class ResourceController extends BaseController {
     @Autowired
-    private IResourceService resourceService;
+    private IPermissionService resourceService;
 
     @RequestMapping("/tree/{resourceId}")
     @ResponseBody
@@ -32,14 +32,14 @@ public class ResourceController extends BaseController {
 
     @RequestMapping("/index")
     public String index(ModelMap map) {
-        Page<Resource> page = resourceService.findAll(getPageRequest());
+        Page<Permission> page = resourceService.findAll(getPageRequest());
         map.put("pageInfo", page);
         return "admin/resource/index";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String add(ModelMap map) {
-        List<Resource> list = resourceService.findAll();
+        List<Permission> list = resourceService.findAll();
         map.put("list", list);
         return "admin/resource/form";
     }
@@ -47,20 +47,20 @@ public class ResourceController extends BaseController {
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public String edit(@PathVariable Integer id, ModelMap map) {
-        Resource resource = resourceService.find(id);
+        Permission resource = resourceService.find(id);
         map.put("resource", resource);
 
-        List<Resource> list = resourceService.findAll();
+        List<Permission> list = resourceService.findAll();
         map.put("list", list);
         return "admin/resource/form";
     }
 
     @RequestMapping(value = {"/edit"}, method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult edit(Resource resource, Integer parentId, ModelMap map) {
+    public JsonResult edit(Permission resource, Integer parentId, ModelMap map) {
         try {
             if (parentId != null) {
-                Resource parent = new Resource();
+                Permission parent = new Permission();
                 parent.setId(parentId);
                 resource.setParent(parent);
             }

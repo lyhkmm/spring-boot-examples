@@ -10,7 +10,7 @@ import org.springframework.context.annotation.DependsOn;
 
 /**
  * Shiro Config Manager.
- *
+ * 使用shiro的方法注解方式进行权限控制，也可以在Spring的配置文件中开启shiro的注解支持。
  * @author LYH
  */
 public class ShiroManager {
@@ -40,7 +40,7 @@ public class ShiroManager {
 
     /**
      * 开启注解控制权限的方式
-     *
+     * 配置shiro框架提供的切面类，用于创建代理对象
      * @param securityManager
      * @return
      */

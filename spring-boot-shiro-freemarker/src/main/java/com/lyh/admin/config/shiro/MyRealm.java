@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.lyh.admin.common.utils.MD5Utils;
-import com.lyh.admin.entity.Resource;
+import com.lyh.admin.entity.Permission;
 import com.lyh.admin.entity.Role;
 import com.lyh.admin.entity.User;
 import com.lyh.admin.service.IUserService;
@@ -27,6 +27,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author LYH
+ * 在认证、授权内部实现机制中都有提到，最终处理都将交给Real进行处理
  */
 @Component
 public class MyRealm extends AuthorizingRealm {
@@ -42,6 +43,15 @@ public class MyRealm extends AuthorizingRealm {
     @Autowired
     private IUserService userService;
 
+    /**
+     * 权限授权是通过继承AuthorizingRealm抽象类，重载doGetAuthorizationInfo()
+     * 当访问到页面的时候，链接配置了相应的权限或者shiro标签才会执行此方法否则不会执行，
+     * 所以如果只是简单的身份认证没有权限的控制的话，那么这个方法可以不进行实现，直接返回null即可。
+     * 在这个方法中主要是使用类：SimpleAuthorizationInfo进行角色的添加和权限的添加。
+     * @author linyuanhuang
+     * 16:27 2018/3/29
+     * @return org.apache.shiro.authz.AuthorizationInfo
+    */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(
             PrincipalCollection principals) {
@@ -52,8 +62,8 @@ public class MyRealm extends AuthorizingRealm {
         Set<String> roleSet = new HashSet<String>();
         Set<Role> roles = dbUser.getRoles();
         for (Role role : roles) {
-            Set<Resource> resources = role.getResources();
-            for (Resource resource : resources) {
+            Set<Permission> resources = role.getResources();
+            for (Permission resource : resources) {
                 shiroPermissions.add(resource.getSourceKey());
 
             }
@@ -64,6 +74,18 @@ public class MyRealm extends AuthorizingRealm {
         return authorizationInfo;
     }
 
+    /**
+     * Shiro的认证过程最终会交由Realm执行，这时会调用Realm的getAuthenticationInfo(token)方法
+     * 该方法主要执行以下操作:
+         1、检查提交的进行认证的令牌信息;
+         2、根据令牌信息从数据源(通常为数据库)中获取用户信息;
+         3、对用户信息进行匹配验证;
+         4、验证通过将返回一个封装了用户信息的AuthenticationInfo实例;
+         5、验证失败则抛出AuthenticationException异常信息。
+     * @author linyuanhuang
+     * 16:26 2018/3/29
+     * @return org.apache.shiro.authc.AuthenticationInfo  
+    */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(
             AuthenticationToken token) throws AuthenticationException {

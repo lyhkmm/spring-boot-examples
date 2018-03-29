@@ -18,8 +18,8 @@ import org.springframework.util.Assert;
 import com.lyh.admin.common.Constats;
 import com.lyh.admin.dao.IRoleDao;
 import com.lyh.admin.dao.support.IBaseDao;
-import com.lyh.admin.entity.Resource;
-import com.lyh.admin.service.IResourceService;
+import com.lyh.admin.entity.Permission;
+import com.lyh.admin.service.IPermissionService;
 
 /**
  * <p>
@@ -35,7 +35,7 @@ public class RoleServiceImpl extends BaseServiceImpl<Role, Integer> implements I
     @Autowired
     private IRoleDao roleDao;
     @Autowired
-    private IResourceService resourceService;
+    private IPermissionService resourceService;
 
     @Override
     public IBaseDao<Role, Integer> getBaseDao() {
@@ -74,8 +74,8 @@ public class RoleServiceImpl extends BaseServiceImpl<Role, Integer> implements I
         Assert.notNull(role, "角色不存在");
 
         Assert.state(!"administrator".equals(role.getRoleKey()), "超级管理员角色不能进行资源分配");
-        Resource resource;
-        Set<Resource> resources = new HashSet<Resource>();
+        Permission resource;
+        Set<Permission> resources = new HashSet<Permission>();
         if (resourceIds != null) {
             for (int i = 0; i < resourceIds.length; i++) {
                 if (StringUtils.isBlank(resourceIds[i]) || "0".equals(resourceIds[i])) {

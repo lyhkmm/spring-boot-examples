@@ -6,13 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SPPanAdmin" />
+        <module name="spring-boot-shiro-freemarker" />
         <module name="spring-boot-shiro-freemarker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SPPanAdmin" target="1.7" />
-      <module name="spring-boot-shiro-freemarker" target="1.7" />
+      <module name="spring-boot-shiro-freemarker" target="1.8" />
+      <module name="spring-boot-shiro-freemarker" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

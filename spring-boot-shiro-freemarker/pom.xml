@@ -25,12 +25,11 @@
 		<java.version>1.7</java.version>
 	</properties>
 
-	<!-- Add typical dependencies for a web application -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<!-- 容器启动,启用下面代码 -->
+			<!-- tomcat容器启动 -->
 			<!--
 			<exclusions>
 				<exclusion>
@@ -40,7 +39,7 @@
 			</exclusions>
 			-->
 		</dependency>
-
+		<!--freenarker-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
@@ -72,7 +71,7 @@
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache</artifactId>
 		</dependency>
-		
+		<!--shiro-->
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-core</artifactId>
@@ -105,7 +104,6 @@
 			<artifactId>joda-time</artifactId>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.jadira.usertype/usertype.core -->
 		<dependency>
 			<groupId>org.jadira.usertype</groupId>
 			<artifactId>usertype.core</artifactId>

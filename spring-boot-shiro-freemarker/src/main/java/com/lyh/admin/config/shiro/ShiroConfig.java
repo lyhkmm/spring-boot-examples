@@ -1,6 +1,7 @@
 package com.lyh.admin.config.shiro;
 
-import com.lyh.admin.service.IResourceService;
+import com.lyh.admin.entity.Permission;
+import com.lyh.admin.service.IPermissionService;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.MemoryConstrainedCacheManager;
 import org.apache.shiro.mgt.DefaultSecurityManager;
@@ -23,7 +24,7 @@ import java.util.Map;
 public class ShiroConfig {
 
     @Resource
-    private IResourceService resourceService;
+    private IPermissionService resourceService;
 
 
     @Bean(name = "realm")
@@ -66,8 +67,8 @@ public class ShiroConfig {
 
         filterChainDefinitionMap.put("/admin/login", "anon");
 
-        List<com.lyh.admin.entity.Resource> list = resourceService.findAll();
-        for (com.lyh.admin.entity.Resource resource : list) {
+        List<Permission> list = resourceService.findAll();
+        for (Permission resource : list) {
             filterChainDefinitionMap.put(resource.getSourceUrl(), "perms[" + resource.getSourceKey() + "]");
         }
 
