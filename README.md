@@ -6,3 +6,6 @@
 <br> [3、SpringBoot+Redis](http://blog.csdn.net/lyhkmm/article/details/78501232)
 <br> [4、SpringBoot+Mongodb](http://blog.csdn.net/lyhkmm/article/details/78753921)
 <br> [5、SpringBoot+RabbitMQ](http://blog.csdn.net/lyhkmm/article/details/78772919)
+<br> [6、SpringBoot+Spring Date Jpa](https://blog.csdn.net/lyhkmm/article/details/78794330)
+<br> [7、SpringBoot+部署](http://blog.csdn.net/lyhkmm/article/details/78855725)
+<br> [5、SpringBoot+Shiro+FreeMarker](http://blog.csdn.net/lyhkmm/article/details/79746079)
