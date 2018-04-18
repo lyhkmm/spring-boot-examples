@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="spring-boot-shiro-freemarker:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="admin-0.0.1-SNAPSHOT.war">
-      <element id="artifact" artifact-name="spring-boot-shiro-freemarker:war exploded" />
-    </root>
-  </artifact>
-</component>
