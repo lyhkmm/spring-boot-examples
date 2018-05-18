@@ -8,4 +8,4 @@
 <br> [5、SpringBoot+RabbitMQ](http://blog.csdn.net/lyhkmm/article/details/78772919)
 <br> [6、SpringBoot+Spring Date Jpa](https://blog.csdn.net/lyhkmm/article/details/78794330)
 <br> [7、SpringBoot+部署](http://blog.csdn.net/lyhkmm/article/details/78855725)
-<br> [5、SpringBoot+Shiro+FreeMarker](http://blog.csdn.net/lyhkmm/article/details/79746079)
+<br> [8、SpringBoot+Shiro+FreeMarker](http://blog.csdn.net/lyhkmm/article/details/79746079)
