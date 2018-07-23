@@ -36,7 +36,7 @@ public class RabbitMqTopicConfig {
 
     @Bean
     Binding bindingExchangeMessage(Queue queueMessage, TopicExchange exchange) {
-        return BindingBuilder.bind(queueMessage).to(exchange).with("topic.single");
+        return BindingBuilder.bind(queueMessage).to(exchange).with("topic.message");
     }
 
     @Bean
